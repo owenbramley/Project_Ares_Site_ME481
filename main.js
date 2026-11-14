@@ -173,7 +173,7 @@ const g = 9.81;
     'A press brake, the machine that folds sheet. Photo: GaspariniIndustries, CC BY-SA 4.0.',
     'Blind rivets, the kind that hold our panels. Photo: Fructibus, CC0.',
     'A desktop printer at work. Photo: MukhtaromST, CC0.',
-    'Our electronics bay in CAD: Pi 5 above, sensor boards below.',
+    'Our electronics bay in CAD: Pi 4 above, sensor boards below.',
     'Kawainui, where the drops happen. Photo: Eric Tessmer, CC BY 3.0.',
   ];
   const rows = list.querySelectorAll('.index__row');
