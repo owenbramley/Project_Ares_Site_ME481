@@ -3,6 +3,7 @@
 FROM nginx:1.30.5-alpine
 COPY deploy/nginx.conf /etc/nginx/conf.d/default.conf
 COPY index.html styles.css main.js /usr/share/nginx/html/
+COPY wiki /usr/share/nginx/html/wiki
 COPY assets /usr/share/nginx/html/assets
 RUN rm -f /usr/share/nginx/html/assets/found/credits.json \
  && find /usr/share/nginx/html -type d -exec chmod 755 {} + \

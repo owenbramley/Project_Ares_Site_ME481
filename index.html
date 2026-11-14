@@ -34,7 +34,8 @@
     <a class="folder" href="#status" style="--f:var(--sun);--fi:var(--ink);--tab:16%;--n:1"><span class="folder__tab">Where we stand</span></a>
     <a class="folder" href="#mission" style="--f:var(--shell);--fi:var(--paper);--tab:28%;--n:2"><span class="folder__tab">The mission</span></a>
     <a class="folder" href="#machine" style="--f:var(--navy-2);--fi:var(--paper);--tab:40%;--n:3"><span class="folder__tab">The machine</span></a>
-    <div class="folder folder--front" style="--f:var(--rust);--fi:var(--paper);--tab:4%;--n:4">
+    <a class="folder" href="#files" style="--f:var(--bone-2);--fi:var(--ink);--tab:52%;--n:4"><span class="folder__tab">Project files</span></a>
+    <div class="folder folder--front" style="--f:var(--rust);--fi:var(--paper);--tab:4%;--n:5">
       <a class="folder__tab" href="#drop">The drop</a>
       <a class="button" href="#drop">Fall 40 metres</a>
     </div>
@@ -348,6 +349,22 @@
   </div>
 </section>
 
+<!-- ============ PROJECT FILES: the Drive, browsable ============ -->
+<section class="files" id="files" aria-labelledby="files-h">
+  <div class="wrap files__grid">
+    <div class="files__head" data-reveal>
+      <h2 class="head" id="files-h">Project files</h2>
+      <p>Every document we work from, from requirements to meeting minutes, copied from our shared Drive every 15&nbsp;minutes. Pick a folder and look around.</p>
+      <p class="small nums files__meta" data-files-meta></p>
+    </div>
+    <nav class="files__tops" aria-label="Top folders" data-files-tops></nav>
+    <div class="files__panel" data-files-panel aria-live="polite">
+      <p>Loading the folders…</p>
+    </div>
+    <p class="files__more" data-reveal><a class="button" href="/wiki/">Search every file</a></p>
+  </div>
+</section>
+
 <!-- ============ EVOLUTION: tiles that grow ============ -->
 <section class="evo" id="evolution" aria-labelledby="evo-h">
   <div class="wrap evo__grid">
@@ -397,8 +414,11 @@
         <li data-reveal style="--i:5"><img class="face" src="assets/team/zachary-gregorio.webp" width="280" height="280" alt="Zachary Gregorio" loading="lazy"><span><strong>Zachary Gregorio</strong>Rover lead</span></li>
         <li data-reveal style="--i:6"><img class="face" src="assets/team/ethan-santiago.webp" width="280" height="280" alt="Ethan Santiago" loading="lazy"><span><strong>Ethan Santiago</strong>Deployables, parachute</span></li>
         <li data-reveal style="--i:7"><img class="face" src="assets/team/julien-wooten.webp" width="280" height="280" alt="Julien Wooten" loading="lazy"><span><strong>Julien Wooten</strong>Deployables, landing legs</span></li>
+        <li data-reveal style="--i:8"><img class="face" src="assets/team/gabriel-figueiredo.webp" width="280" height="280" alt="Gabriel Figueiredo" loading="lazy"><span><strong>Gabriel Figueiredo</strong>Rover, navigation & imaging</span></li>
+        <li data-reveal style="--i:9"><img class="face" src="assets/team/peter-simeon.webp" width="280" height="280" alt="Julien Wooten" loading="lazy"><span><strong>Peter Simeon</strong>Deployables, parachute</span></li>
+
       </ul>
-      <p class="crew__with" data-reveal>Plus Gabriel Figueiredo on rover software, and Max Sibayan and Peter Simeon on deployables, all three from the Vertically Integrated Projects programme. Guided by Dr.&nbsp;Sorensen, our instructor and the reason for the name, Dr.&nbsp;Hudson, our technical advisor, and Kayla Crook, our TA.</p>
+      <p class="crew__with" data-reveal>Gabriel Figueiredo, Max Sibayan and Peter Simeon are our three from the Vertically Integrated Projects programme. Guided by Dr.&nbsp;Sorensen, our instructor and the reason for the name, Dr.&nbsp;Hudson, our technical advisor, and Kayla Crook, our TA.</p>
     </div>
   </div>
 </section>
@@ -437,6 +457,7 @@
         <li><a class="link" href="#analysis">Show the working</a></li>
         <li><a class="link" href="#machine">The machine</a></li>
         <li><a class="link" href="#build">The build</a></li>
+        <li><a class="link" href="#files">Project files</a></li>
       </ul>
       <ul>
         <li><a class="link" href="#status">Where we stand</a></li>

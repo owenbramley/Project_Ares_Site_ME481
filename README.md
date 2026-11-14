@@ -42,6 +42,14 @@ within a few minutes. A release is just `git push`.
 The service rolls stop-first: two app nodes with one replica each leave no room for a
 start-first task.
 
+## Project files
+
+`wiki/` is the full file list at `/wiki/`, and the "Project files" section on the home page browses
+the same folders. Both read `/wiki/files/_wiki/manifest.json`. The files themselves are a copy of
+the team's Google Drive kept on the cluster (`stack/ares-wiki.yml` and `docs/ares-wiki.md` in the
+Bramblebush repo); Traefik sends `/wiki/files/` there, not to this image. To preview locally,
+put a copy of the manifest at `wiki/files/_wiki/manifest.json` (ignored by Git and Docker).
+
 ## Keeping it current
 
 The "Where we stand" section is the status page for sponsors: mass, money and schedule. Update

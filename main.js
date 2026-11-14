@@ -202,3 +202,99 @@ const g = 9.81;
   const io = new IntersectionObserver((entries) => { entries.forEach((e) => seen.set(e.target, e.isIntersecting)); update(); }, { threshold: 0 });
   [hero, status, drop, foot].forEach((el) => el && io.observe(el));
 })();
+
+/* ---------- 6. project files: top folders as tiles, then browse inside ---------- */
+(() => {
+  const root = document.getElementById('files');
+  if (!root) return;
+  const tops = root.querySelector('[data-files-tops]');
+  const panel = root.querySelector('[data-files-panel]');
+  const meta = root.querySelector('[data-files-meta]');
+  const BASE = '/wiki/files/';
+  const COLOURS = [['var(--sun)', 'var(--ink)'], ['var(--shell)', 'var(--paper)'], ['var(--navy-2)', 'var(--paper)'], ['var(--rust)', 'var(--paper)'], ['var(--navy)', 'var(--paper)']];
+  const pretty = (s) => s.replace(/／/g, '/').trim();
+  const title = (n) => pretty(n.replace(/(\.pdf)+$|\.[a-z0-9]{2,5}$/i, ''));
+  const kind = (n) => { const m = /\.([a-z0-9]{2,5})$/i.exec(n); return m ? m[1].toUpperCase() : 'File'; };
+  const size = (b) => b < 1048576 ? `${Math.max(1, Math.round(b / 1024))} KB` : `${(b / 1048576).toFixed(1)} MB`;
+  const href = (p) => BASE + p.split('/').map(encodeURIComponent).join('/');
+  const byName = (a, b) => a.localeCompare(b, 'en', { numeric: true });
+  const el = (tag, attrs = {}, ...kids) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) k === 'text' ? (n.textContent = v) : n.setAttribute(k, v);
+    n.append(...kids);
+    return n;
+  };
+
+  // folder tree: { dirs: Map(name -> node), files: [], count }
+  const node = () => ({ dirs: new Map(), files: [], count: 0 });
+  const tree = node();
+  let path = [];
+
+  const at = (parts) => parts.reduce((n, p) => n.dirs.get(p), tree);
+
+  function show(parts, focus) {
+    path = parts;
+    const here = at(parts);
+    const top = parts[0];
+    const i = [...tree.dirs.keys()].sort(byName).indexOf(top);
+    const [bg, fg] = COLOURS[i % COLOURS.length];
+    tops.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.top === top)));
+    panel.style.setProperty('--f', bg); panel.style.setProperty('--fi', fg);
+
+    const crumbs = el('ol', { class: 'files__crumbs small' });
+    parts.forEach((p, k) => {
+      const last = k === parts.length - 1;
+      crumbs.append(el('li', {}, last ? el('span', { 'aria-current': 'location', text: pretty(p) })
+        : el('button', { type: 'button', class: 'link', 'data-to': String(k + 1), text: pretty(p) })));
+    });
+
+    const list = el('ul', { class: 'files__list' });
+    if (parts.length > 1) list.append(el('li', {}, el('button', { type: 'button', class: 'files__row files__row--dir', 'data-to': String(parts.length - 1) },
+      el('span', { text: 'Up a folder' }), el('span', { class: 'small', text: '' }))));
+    [...here.dirs.keys()].sort(byName).forEach((d) => {
+      const n = here.dirs.get(d).count;
+      list.append(el('li', {}, el('button', { type: 'button', class: 'files__row files__row--dir', 'data-into': d },
+        el('span', { text: pretty(d) }), el('span', { class: 'small nums', text: `${n} ${n === 1 ? 'file' : 'files'}` }))));
+    });
+    here.files.slice().sort((a, b) => byName(a.Name, b.Name)).forEach((f) => {
+      list.append(el('li', {}, el('a', { class: 'files__row', href: href(f.Path), target: '_blank', rel: 'noopener' },
+        el('span', { text: title(f.Name) }), el('span', { class: 'small nums', text: `${kind(f.Name)} · ${size(f.Size)}` }))));
+    });
+    panel.replaceChildren(el('div', { class: 'files__tab' }, crumbs), list);
+    if (focus) panel.querySelector('.files__row')?.focus({ preventScroll: true });
+  }
+
+  panel.addEventListener('click', (e) => {
+    const b = e.target.closest('button');
+    if (!b) return;
+    if (b.dataset.into) show([...path, b.dataset.into], true);
+    else if (b.dataset.to) show(path.slice(0, +b.dataset.to), true);
+  });
+
+  fetch(BASE + '_wiki/manifest.json', { cache: 'no-cache' })
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((files) => {
+      for (const f of files) {
+        const parts = f.Path.split('/');
+        if (parts.length === 1) continue;            // loose files: the full list has them
+        let n = tree; n.count++;
+        for (const p of parts.slice(0, -1)) { if (!n.dirs.has(p)) n.dirs.set(p, node()); n = n.dirs.get(p); n.count++; }
+        n.files.push(f);
+      }
+      meta.textContent = `${files.length} files in ${tree.dirs.size} folders.`;
+      [...tree.dirs.keys()].sort(byName).forEach((t, i) => {
+        const [bg, fg] = COLOURS[i % COLOURS.length];
+        const n = tree.dirs.get(t).count;
+        const b = el('button', { type: 'button', class: 'files__top', 'data-top': t, 'aria-pressed': 'false', style: `--f:${bg};--fi:${fg}` },
+          el('span', { text: pretty(t) }), el('span', { class: 'small nums', text: String(n) }));
+        b.addEventListener('click', () => show([t], false));
+        tops.append(b);
+      });
+      const first = [...tree.dirs.keys()].sort(byName)[0];
+      if (first) show([first], false);
+    })
+    .catch(() => {
+      tops.remove();
+      panel.replaceChildren(el('p', {}, 'The folders are not available right now. ', el('a', { class: 'link', href: '/wiki/', text: 'Try the full file list' }), '.'));
+    });
+})();
