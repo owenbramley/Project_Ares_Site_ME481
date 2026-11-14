@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Project Ares · Team DSLR</title>
-<meta name="description" content="Team DSLR (Dr. Sorensen's Last Resort) is an 11-person team at the University of Hawaiʻi at Mānoa, eight of them mechanical engineering seniors, building a mock Mars lander and rover dropped from a drone at 40 metres.">
+<meta name="description" content="Team DSLR is an 11-person senior design team at the University of Hawaiʻi at Mānoa, eight of them mechanical engineering seniors, building a mock Mars lander and rover released from a drone at 30 to 40 metres.">
 <meta name="theme-color" content="#0e1f5b">
 <link rel="icon" href="assets/team-dslr-logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,33 +20,69 @@
   <div class="hero__bar wrap">
     <span class="hero__where small">UH Mānoa · ME 481</span>
     <a class="hero__mark" href="#top" aria-label="Team DSLR, back to top"><img src="assets/team-dslr-logo.webp" width="900" height="388" alt="Team DSLR"></a>
-    <a class="hero__link link" href="#watch">Drop day</a>
+    <a class="hero__link link" href="#contact">Contact</a>
   </div>
 
   <div class="hero__copy wrap">
     <h1 class="display" data-rise style="--i:0">Project Ares</h1>
-    <p class="hero__sub" data-rise style="--i:1">Team DSLR is eleven people at UH Mānoa, eight of us mechanical engineering seniors, building a Mars lander to drop from a drone at 40&nbsp;metres.</p>
-    <p class="hero__aka" data-rise style="--i:2">DSLR? Dr.&nbsp;Sorensen’s Last Resort.</p>
+    <p class="hero__sub" data-rise style="--i:1">Team DSLR is eleven people at UH Mānoa, eight of us mechanical engineering seniors, building a Mars lander and rover to drop from a drone at 40&nbsp;metres.</p>
+    <p class="hero__aka" data-rise style="--i:2">On paper, DSLR is Descent, Surface Landing and Rover. Off the record, it’s Dr.&nbsp;Sorensen’s Last&nbsp;Resort.</p>
   </div>
 
   <nav class="folders" aria-label="Sections">
     <a class="folder" href="#crew" style="--f:var(--bone);--fi:var(--ink);--tab:4%;--n:0"><span class="folder__tab">The crew</span></a>
-    <a class="folder" href="#numbers" style="--f:var(--sun);--fi:var(--ink);--tab:16%;--n:1"><span class="folder__tab">The numbers</span></a>
-    <a class="folder" href="#build" style="--f:var(--shell);--fi:var(--paper);--tab:28%;--n:2"><span class="folder__tab">The build</span></a>
+    <a class="folder" href="#status" style="--f:var(--sun);--fi:var(--ink);--tab:16%;--n:1"><span class="folder__tab">Where we stand</span></a>
+    <a class="folder" href="#mission" style="--f:var(--shell);--fi:var(--paper);--tab:28%;--n:2"><span class="folder__tab">The mission</span></a>
     <a class="folder" href="#machine" style="--f:var(--navy-2);--fi:var(--paper);--tab:40%;--n:3"><span class="folder__tab">The machine</span></a>
     <div class="folder folder--front" style="--f:var(--rust);--fi:var(--paper);--tab:4%;--n:4">
       <a class="folder__tab" href="#drop">The drop</a>
       <a class="button" href="#drop">Fall 40 metres</a>
     </div>
   </nav>
-  <img class="hero__lander" src="assets/renders/iso-open.webp" width="1800" height="1861" alt="CAD render of the Ares lander standing on four legs with its ramp lowered and the rover inside" fetchpriority="high">
+  <img class="hero__lander" src="assets/renders/pdr-front-rover.webp" width="1096" height="823" alt="CAD render of the Ares lander standing on four legs, front open, with the rover stowed inside" fetchpriority="high">
 </header>
 
 <main>
 
-<!-- ============ INTRO: statement with inline frames ============ -->
-<section class="intro" aria-label="What we are building">
-  <p class="intro__text" data-reveal>A 4&nbsp;kg lander <span class="thumb" style="--tf:var(--sun)"><img src="assets/renders/shell-closed.webp" alt="" width="1417" height="1448"></span> falls from a drone, cuts its parachute 3&nbsp;m up, lands on four legs <span class="thumb" style="--tf:var(--rust)"><img src="assets/renders/legs-underside.webp" alt="" width="1800" height="1525"></span> and sends a rover <span class="thumb" style="--tf:var(--navy-2)"><img src="assets/renders/ramp-rover.webp" alt="" width="1800" height="1514"></span> down its ramp.</p>
+<!-- ============ INTRO: statement, then the six questions ============ -->
+<section class="intro" aria-labelledby="brief-h">
+  <p class="intro__text" data-reveal>A 5.6&nbsp;kg lander <span class="thumb" style="--tf:var(--sun)"><img src="assets/renders/pdr-iso.webp" alt="" width="741" height="658"></span> falls from a drone, drops its parachute 2&nbsp;m up, lands on four legs <span class="thumb" style="--tf:var(--rust)"><img src="assets/renders/pdr-underside.webp" alt="" width="887" height="810"></span> and sends a rover <span class="thumb" style="--tf:var(--navy-2)"><img src="assets/renders/pdr-ramp.webp" alt="" width="1035" height="849"></span> down its ramp.</p>
+
+  <nav class="glance" aria-label="Status at a glance">
+    <a class="glance__tile" href="#performance" style="--g:var(--sun)" data-reveal><p class="lead">On track</p><p>Performance: every objective has a design that meets it on paper</p></a>
+    <a class="glance__tile" href="#time" style="--g:var(--shell);--gi:var(--paper)" data-reveal><p class="lead">On schedule</p><p>Time: design review passed, next is the CDR in December</p></a>
+    <a class="glance__tile" href="#money" style="--g:var(--navy);--gi:var(--paper)" data-reveal><p class="lead">Under budget</p><p>Money: $2,568 planned of $3,000, nothing spent yet</p></a>
+  </nav>
+
+  <div class="brief">
+    <h2 class="head brief__h" id="brief-h" data-reveal>The short version</h2>
+    <dl class="brief__list">
+      <div data-reveal style="--i:0"><dt>Who</dt><dd>Team DSLR: eleven students in UH Mānoa’s ME&nbsp;481/482 senior design course, with Dr.&nbsp;Sorensen as instructor, Dr.&nbsp;Hudson as technical advisor and Kayla Crook as TA.</dd></div>
+      <div data-reveal style="--i:1"><dt>What</dt><dd>A mock Mars lander and rover that run the main steps of a soft landing: release, parachute descent, touchdown, rover egress, flag, imaging and telemetry.</dd></div>
+      <div data-reveal style="--i:2"><dt>When</dt><dd>Designed in Fall 2026. Built from January 2027, drop-tested from February, demonstrated in April 2027.</dd></div>
+      <div data-reveal style="--i:3"><dt>Where</dt><dd>Designed and built at UH Mānoa in Honolulu. Drops are planned at an airstrip in Kailua with UH’s CAMROCK team, with Kawainui Model Airplane Field as the backup.</dd></div>
+      <div data-reveal style="--i:4"><dt>Why</dt><dd>Landing is where Mars missions are lost. A small, low-cost demonstrator lets students practise the whole chain, from requirements to drop test, and leaves a reusable rig for the teams after us.</dd></div>
+      <div data-reveal style="--i:5"><dt>How</dt><dd>Folded aluminium, a spring-fired 1.83&nbsp;m parachute, crushable legs, a Raspberry Pi&nbsp;4 flight computer, and a ground station on its own radio and video links. A hexacopter does the lifting.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ MISSION: statement and objectives ============ -->
+<section class="mission" id="mission" aria-labelledby="mission-h">
+  <div class="mission__grid wrap">
+    <h2 class="head mission__h" id="mission-h" data-reveal>The mission</h2>
+    <p class="mission__text" data-reveal>To design and develop a remotely operated lander and rover that carry out tasks and return data and images from the landing area, demonstrating the major systems and operations of a soft-landing Mars mission after release from a drone, by the end of Spring&nbsp;2027.</p>
+    <ol class="objectives">
+      <li data-reveal style="--i:0">Demonstrate the key phases of a Mars landing and surface mission, at reduced scale.</li>
+      <li data-reveal style="--i:1">Descend and land upright, at no more than 8&nbsp;m/s.</li>
+      <li data-reveal style="--i:2">Get the rover out of the lander after touchdown.</li>
+      <li data-reveal style="--i:3">Raise the American flag automatically after landing.</li>
+      <li data-reveal style="--i:4">Capture, store and send imagery throughout the mission.</li>
+      <li data-reveal style="--i:5">Keep commands and telemetry flowing both ways, reliably.</li>
+      <li data-reveal style="--i:6">Stream live video on a link independent of commands.</li>
+      <li data-reveal style="--i:7">Log lander status and instrument data for live monitoring and later analysis.</li>
+    </ol>
+  </div>
 </section>
 
 <!-- ============ THE DROP: scroll is altitude ============ -->
@@ -62,40 +98,40 @@
 
     <ol class="drop__phases">
       <li class="phase">
-        <figure class="phase__media"><img src="assets/renders/shell-closed.webp" width="1417" height="1448" alt="Render of the closed lander shell, legs stowed" loading="lazy"></figure>
-        <div class="phase__text"><p class="phase__mark small">40 m</p><h3>Release</h3><p>The drone lets go. Telemetry starts at 10&nbsp;Hz: acceleration, pressure, inside and outside temperature, and CO₂ once a second.</p></div>
+        <figure class="phase__media phase__media--photo"><img src="assets/found/hexacopter-dji-s800-alexander-glinz.jpg" width="1000" height="666" alt="A six-rotor DJI S800 hexacopter in flight against a blue sky" loading="lazy"><figcaption class="small">A DJI S800 hexacopter in flight. Alexander Glinz, CC BY-SA 3.0 AT.</figcaption></figure>
+        <div class="phase__text"><p class="phase__mark small">40 m</p><h3>Release</h3><p>A servo on the lander’s roof pulls a pin and the drone’s tether lets go. Telemetry runs at 10&nbsp;Hz: acceleration, pressure, temperature, and CO₂ once a second.</p></div>
       </li>
       <li class="phase">
         <figure class="phase__media phase__media--photo"><img src="assets/found/hirise-msl-parachute.jpg" width="1920" height="1273" alt="Orbital photograph of NASA's Curiosity rover descending under its parachute over Mars, 2012" loading="lazy"><figcaption class="small">Curiosity under its parachute, seen from orbit in 2012. NASA/JPL/University of Arizona.</figcaption></figure>
-        <div class="phase__text"><p class="phase__mark small">38 m</p><h3>Chute out</h3><p>A servo trips a sear and a spring piston fires the parachute out of its canister. Ours opens a few metres below the drone, not eleven kilometres up.</p></div>
+        <div class="phase__text"><p class="phase__mark small">38 m</p><h3>Chute out</h3><p>A servo opens the canister hatch and a spring throws out the 1.83&nbsp;m parachute. Ours opens a few metres below the drone, not eleven kilometres up.</p></div>
       </li>
       <li class="phase">
-        <figure class="phase__media"><img src="assets/renders/legs-underside.webp" width="1800" height="1525" alt="Render from below showing the four deployed landing legs" loading="lazy"></figure>
-        <div class="phase__text"><p class="phase__mark small">30 m</p><h3>Legs down</h3><p>Two seconds after release a solenoid lets go and the spring-loaded legs swing out into a wide stance.</p></div>
+        <figure class="phase__media"><img src="assets/renders/pdr-underside.webp" width="887" height="810" alt="Render from below showing the four deployed tripod legs" loading="lazy"></figure>
+        <div class="phase__text"><p class="phase__mark small">30 m</p><h3>Legs down</h3><p>Two seconds after release a solenoid lock lets go and spring-loaded struts swing the four tripod legs out into a wide stance.</p></div>
       </li>
       <li class="phase">
         <figure class="phase__media phase__media--photo"><video src="assets/jezero-descent.mp4" poster="assets/jezero-descent-poster.jpg" width="480" height="384" muted loop playsinline preload="none" aria-label="Footage from Perseverance's downward camera as it descended to Jezero Crater"></video><figcaption class="small">Perseverance's own descent camera, Jezero Crater, 2021. NASA/JPL-Caltech.</figcaption></figure>
-        <div class="phase__text"><p class="phase__mark small">15 m</p><h3>Live video</h3><p>A RunCam streams the fall to the ground station on 5.8&nbsp;GHz. Commands and telemetry ride a separate HC-12 radio on 433&nbsp;MHz, so one can fail without the other.</p></div>
+        <div class="phase__text"><p class="phase__mark small">15 m</p><h3>Live video</h3><p>A RunCam streams the fall to the ground on analog 5.8&nbsp;GHz. Commands and telemetry ride XBee radios at 900&nbsp;MHz on separate hardware, so one can fail without the other.</p></div>
       </li>
       <li class="phase">
         <figure class="phase__media phase__media--plate"><img src="assets/renders/xray-rover.webp" width="1800" height="1471" alt="Ghosted render of the lander showing the rover packed inside" loading="lazy"></figure>
-        <div class="phase__text"><p class="phase__mark small">2.5 m</p><h3>Cut away</h3><p>Between 2 and 3&nbsp;metres the parachute lets go, so it can't drape over the lander or drag it sideways.</p></div>
+        <div class="phase__text"><p class="phase__mark small">2 m</p><h3>Cut away</h3><p>When the barometer, ultrasonic and time-of-flight sensors agree the ground is 2 to 3&nbsp;metres away, a solenoid pin drops the parachute, so it can’t drape over the lander or drag it sideways.</p></div>
       </li>
       <li class="phase">
-        <figure class="phase__media"><img src="assets/renders/front-flag.webp" width="1800" height="1099" alt="Front render of the lander standing on its legs" loading="lazy"></figure>
-        <div class="phase__text"><p class="phase__mark small">0 m</p><h3>Touchdown</h3><p>Upright, on its legs, under 8&nbsp;m/s. Printed honeycomb in the struts crushes to soak up the hit.</p></div>
+        <figure class="phase__media"><img src="assets/renders/pdr-iso.webp" width="741" height="658" alt="Three-quarter render of the lander standing on its four legs" loading="lazy"></figure>
+        <div class="phase__text"><p class="phase__mark small">0 m</p><h3>Touchdown</h3><p>Upright, on its legs, under 8&nbsp;m/s. Honeycomb inside each central strut crushes to soak up as much as 192&nbsp;J, then a spring levels the body.</p></div>
       </li>
       <li class="phase">
-        <figure class="phase__media"><img src="assets/renders/iso-open.webp" width="1800" height="1861" alt="Render of the lander with its ramp lowered to the ground" loading="lazy"></figure>
-        <div class="phase__text"><p class="phase__mark small">T+10:00</p><h3>Ramp down</h3><p>On the GO TO DEPLOY command, or on its own after ten minutes, a solenoid pulls a pin and gravity lowers the ramp.</p></div>
+        <figure class="phase__media"><img src="assets/renders/pdr-side-ramp.webp" width="1042" height="856" alt="Side render of the lander with its ramp swung down to the ground" loading="lazy"></figure>
+        <div class="phase__text"><p class="phase__mark small">T+10:00</p><h3>Ramp down</h3><p>On the GO TO DEPLOY command, or on its own after ten minutes, a solenoid retracts and a torsion spring swings the ramp to the ground.</p></div>
       </li>
       <li class="phase">
-        <figure class="phase__media"><img src="assets/renders/ramp-rover.webp" width="1800" height="1514" alt="Render of the four-wheel rover at the top of the lowered ramp" loading="lazy"></figure>
-        <div class="phase__text"><p class="phase__mark small">T+11:00</p><h3>Rover out</h3><p>A Raspberry Pi 4 rover drives itself at least a metre clear and shoots a 360° panorama of the landing site.</p></div>
+        <figure class="phase__media"><img src="assets/renders/pdr-front-rover.webp" width="1096" height="823" alt="Front render of the lander with the rover inside, ready to drive out" loading="lazy"></figure>
+        <div class="phase__text"><p class="phase__mark small">T+11:00</p><h3>Rover out</h3><p>A Raspberry Pi&nbsp;4 rover with 360° LiDAR drives down, circles the lander at least a metre out and shoots a 360° panorama of the site.</p></div>
       </li>
       <li class="phase">
-        <figure class="phase__media phase__media--plate"><img src="assets/renders/side-ramp.webp" width="1800" height="1130" alt="Side render of the lander with ramp down and flag raised" loading="lazy"></figure>
-        <div class="phase__text"><p class="phase__mark small">T+13:00</p><h3>Flag up</h3><p>A servo swings the flag to vertical. A minute later the rover turns round and photographs the lander. Mission complete.</p></div>
+        <figure class="phase__media"><img src="assets/renders/pdr-front.webp" width="1107" height="830" alt="Front render of the lander with the flag raised" loading="lazy"></figure>
+        <div class="phase__text"><p class="phase__mark small">T+12:00</p><h3>Flag up</h3><p>Two minutes after the rover leaves, a servo swings the printed flag to vertical. A minute later the rover photographs the lander. Mission complete.</p></div>
       </li>
     </ol>
   </div>
@@ -106,36 +142,68 @@
   <div class="chute__grid wrap">
     <div class="chute__head" data-reveal>
       <h2 class="head" id="chute-h">Size the parachute yourself</h2>
-      <p>The catch is the last few metres. Once the chute is cut, the lander free-falls, and 2.5&nbsp;m of free fall alone ends at 7&nbsp;m/s. So the chute has to slow us almost to walking pace before it lets go. These are the equations from our proposal, running live.</p>
+      <p>The catch is the last two metres. Once the parachute drops away the lander free-falls, and 2&nbsp;m of free fall alone ends at 6.3&nbsp;m/s. So the canopy has to slow us to about 4&nbsp;m/s before it lets go. These are the numbers from our design review, running live.</p>
     </div>
 
     <output class="chute__result" for="mass dia cut cd" data-reveal>
-      <span class="display nums"><span data-out="vtd">7.9</span><span class="chute__unit">m/s</span></span>
+      <span class="display nums"><span data-out="vtd">7.4</span><span class="chute__unit">m/s</span></span>
       <span class="chute__what">at touchdown</span>
-      <span class="chute__verdict" data-out="verdict">Inside the 8&nbsp;m/s limit, just.</span>
+      <span class="chute__verdict" data-out="verdict">Inside the 8&nbsp;m/s limit with room to spare.</span>
     </output>
 
     <form class="chute__controls" data-reveal onsubmit="return false">
-      <label class="ctl"><span class="ctl__row"><span>Lander mass</span><span class="nums"><span data-show="mass">4.08</span>&nbsp;kg</span></span>
-        <input id="mass" type="range" min="3" max="6" step="0.02" value="4.08"></label>
-      <label class="ctl"><span class="ctl__row"><span>Canopy diameter</span><span class="nums"><span data-show="dia">2.10</span>&nbsp;m</span></span>
-        <input id="dia" type="range" min="0.6" max="3" step="0.05" value="2.1"></label>
-      <label class="ctl"><span class="ctl__row"><span>Cut-away height</span><span class="nums"><span data-show="cut">2.5</span>&nbsp;m</span></span>
-        <input id="cut" type="range" min="2" max="3" step="0.1" value="2.5"></label>
+      <label class="ctl"><span class="ctl__row"><span>Vehicle mass</span><span class="nums"><span data-show="mass">5.63</span>&nbsp;kg</span></span>
+        <input id="mass" type="range" min="3" max="6" step="0.01" value="5.63"></label>
+      <label class="ctl"><span class="ctl__row"><span>Canopy diameter</span><span class="nums"><span data-show="dia">1.83</span>&nbsp;m</span></span>
+        <input id="dia" type="range" min="0.6" max="3" step="0.01" value="1.83"></label>
+      <label class="ctl"><span class="ctl__row"><span>Cut-away height</span><span class="nums"><span data-show="cut">2.0</span>&nbsp;m</span></span>
+        <input id="cut" type="range" min="2" max="3" step="0.1" value="2"></label>
       <fieldset class="ctl ctl--pick" id="cd">
-        <legend>Canopy shape</legend>
-        <label><input type="radio" name="cd" value="0.8"> Flat, Cd 0.8</label>
-        <label><input type="radio" name="cd" value="1.5" checked> Domed, Cd 1.5</label>
+        <legend>Drag coefficient</legend>
+        <label><input type="radio" name="cd" value="0.8"> Flat, 0.8</label>
+        <label><input type="radio" name="cd" value="1.5"> Domed, 1.5</label>
+        <label><input type="radio" name="cd" value="2.2" checked> Our design figure, 2.2</label>
       </fieldset>
     </form>
 
     <ul class="chute__more nums" data-reveal>
-      <li><span class="lead"><span data-out="vt">3.8</span> m/s</span> under the canopy</li>
-      <li><span class="lead"><span data-out="ke">128</span> J</span> for the legs to absorb</li>
-      <li><span class="lead"><span data-out="area">3.14</span> m²</span> of canopy</li>
+      <li><span class="lead"><span data-out="vt">3.9</span> m/s</span> under the canopy</li>
+      <li><span class="lead"><span data-out="ke">154</span> J</span> for the legs to absorb</li>
+      <li><span class="lead"><span data-out="area">2.63</span> m²</span> of canopy</li>
     </ul>
 
-    <p class="chute__note small">V under canopy = √(2mg / ρ·Cd·A), then V at touchdown = √(V² + 2gh) from the cut-away height. Air density 1.2&nbsp;kg/m³, sea level at Kawainui. A first-order estimate: no swing, no wind, no opening shock.</p>
+    <p class="chute__note small">V under canopy = √(2mg / ρ·Cd·A), then V at touchdown = √(V² + 2gh) from the cut-away height. Air density 1.225&nbsp;kg/m³ at sea level. A first-order estimate: no swing, no wind, no opening shock, and the body’s own 1.3&nbsp;N of drag left out.</p>
+  </div>
+</section>
+
+<!-- ============ ANALYSIS: the working ============ -->
+<section class="analysis" id="analysis" aria-labelledby="analysis-h">
+  <div class="analysis__grid wrap">
+    <h2 class="head analysis__h" id="analysis-h" data-reveal>Show the working</h2>
+    <p class="analysis__lede" data-reveal>Our Preliminary Design Review runs to 175 pages. Here are four results from it that shape the build.</p>
+
+    <figure class="card card--cfd" data-reveal style="--i:0">
+      <img src="assets/renders/cfd-streamlines.webp" width="656" height="458" alt="ANSYS Fluent streamlines around the lander body at 5 metres per second, coloured by velocity" loading="lazy">
+      <figcaption><p class="head nums">1.3 N</p><p>of drag from the lander body at 5&nbsp;m/s, from an ANSYS Fluent run (SST k–ω). The parachute adds about 86&nbsp;N, comfortably more than the lander’s 59&nbsp;N weight.</p></figcaption>
+    </figure>
+
+    <div class="card card--legs" data-reveal style="--i:1"><p class="head nums">192 J</p><p>for the legs to absorb at 8&nbsp;m/s with a full 6&nbsp;kg. Stopping in 1 to 5&nbsp;cm, that is a 3.9 to 19.2&nbsp;kN hit, which is why the honeycomb matters.</p></div>
+
+    <div class="card card--power" data-reveal style="--i:2"><p class="head nums">2 h</p><p>of lander runtime from two 21700 cells: 12.8&nbsp;W on average, 20.7&nbsp;W at peak.</p></div>
+
+    <div class="card card--mass" data-reveal style="--i:3">
+      <p class="head nums">5,633 g</p><p>estimated mass, built up from CAD and datasheets.</p>
+      <ul class="bars nums">
+        <li style="--w:38.2%"><span>Deployables</span><span>2,290 g</span><i></i></li>
+        <li style="--w:24.1%"><span>Lander structure</span><span>1,445 g</span><i></i></li>
+        <li style="--w:22.2%"><span>Rover</span><span>1,330 g</span><i></i></li>
+        <li style="--w:8.5%"><span>Lander avionics</span><span>508 g</span><i></i></li>
+        <li style="--w:1%"><span>Onboard comms</span><span>60 g</span><i></i></li>
+      </ul>
+      <p class="small">Bars are shares of the 6&nbsp;kg limit. Add 15% growth on the deployables, comms and avionics and the total reaches 6,062&nbsp;g, 62&nbsp;g over, so we’re lightening the panels.</p>
+    </div>
+
+    <p class="analysis__more" data-reveal><a class="button" href="mailto:ob3@hawaii.edu?subject=Project%20Ares%20design%20review">Ask for the full design review</a></p>
   </div>
 </section>
 
@@ -143,13 +211,13 @@
 <section class="machine" id="machine" aria-labelledby="machine-h">
   <div class="wrap">
     <h2 class="sr-only" id="machine-h">The machine</h2>
-    <p class="machine__text" data-reveal>The shell <span class="slot" style="--tf:var(--bone)"><img src="assets/renders/shell-exploded.webp" alt="" width="1735" height="1635"></span> is one flat sheet of aluminium, folded. Legs <span class="slot" style="--tf:var(--sun)"><img src="assets/renders/legs-underside.webp" alt="" width="1800" height="1525"></span> crush printed honeycomb, a pin drops the ramp <span class="slot" style="--tf:var(--rust)"><img src="assets/renders/iso-open.webp" alt="" width="1800" height="1861"></span> and a rover drives out.</p>
+    <p class="machine__text" data-reveal>The shell <span class="slot" style="--tf:var(--bone)"><img src="assets/renders/shell-exploded.webp" alt="" width="1735" height="1635"></span> is folded from 2&nbsp;mm aluminium sheet and riveted. Legs <span class="slot" style="--tf:var(--sun)"><img src="assets/renders/pdr-underside.webp" alt="" width="887" height="810"></span> crush honeycomb, a spring swings the ramp down <span class="slot" style="--tf:var(--rust)"><img src="assets/renders/pdr-side-ramp.webp" alt="" width="1042" height="856"></span> and a rover drives out.</p>
 
     <ul class="systems">
-      <li data-reveal style="--i:0"><h3>Lander</h3><p>Riveted 5052 aluminium shell. Three cameras, sensors and the flight computer in one bay; telemetry at 10&nbsp;Hz, CO₂ at 1&nbsp;Hz.</p><p class="small">Caleb Borengasser, Owen Bramley</p></li>
-      <li data-reveal style="--i:1"><h3>Deployables</h3><p>Spring-fired parachute with a cut-away, tripod legs on crushable honeycomb, a gravity ramp on a solenoid pin and a servo flag.</p><p class="small">Leanelyn Tolentino, Julien Wooten, Ethan Santiago, Gabriel Figueredo, Max Sibayan, Peter Simeon</p></li>
-      <li data-reveal style="--i:2"><h3>Rover</h3><p>A Waveshare RaspRover: four driven 80&nbsp;mm wheels, Raspberry Pi 4 and ESP32, driving itself and imaging in 360°.</p><p class="small">Zachary Gregorio</p></li>
-      <li data-reveal style="--i:3"><h3>Ground</h3><p>HC-12 radio at 433&nbsp;MHz for commands, RunCam WiFiLink at 5.8&nbsp;GHz for video, all watched from a COSMOS ground station.</p><p class="small">Kai Mitchell</p></li>
+      <li data-reveal style="--i:0"><h3>Lander</h3><p>Riveted 5052 aluminium panels around a printed electronics module: a Raspberry Pi&nbsp;4, a Pico&nbsp;2 sensor hub and three AR0230 cameras that can look straight at the sun.</p><p class="small">Caleb Borengasser, Owen Bramley</p></li>
+      <li data-reveal style="--i:1"><h3>Deployables</h3><p>A spring-fired parachute dropped by a solenoid pin, four tripod legs on crushable honeycomb, a torsion-spring ramp, a servo flag and a servo release from the drone.</p><p class="small">Leanelyn Tolentino, Ethan Santiago, Julien Wooten, Max Sibayan, Peter Simeon</p></li>
+      <li data-reveal style="--i:2"><h3>Rover</h3><p>A Waveshare RaspRover: four driven 80&nbsp;mm wheels, a Raspberry Pi&nbsp;4 and ESP32 on ROS&nbsp;2, a 360° LiDAR and a forward camera. An electromagnet holds it for the fall.</p><p class="small">Zachary Gregorio, Gabriel Figueiredo</p></li>
+      <li data-reveal style="--i:3"><h3>Ground</h3><p>XBee-PRO 900HP radios for commands and 10&nbsp;Hz telemetry, two analog 5.8&nbsp;GHz links for lander and rover video, all run from one COSMOS laptop.</p><p class="small">Kai Mitchell, with Team RoSE</p></li>
     </ul>
   </div>
 </section>
@@ -158,18 +226,18 @@
 <section class="build" id="build" aria-labelledby="build-h">
   <div class="wrap build__grid">
     <h2 class="head" id="build-h" data-reveal>Made by hand, here in Mānoa</h2>
-    <p class="build__lede" data-reveal>Almost everything that isn't a circuit board, we make ourselves: from sheet, from filament, from rivets. Point at a step to see it.</p>
+    <p class="build__lede" data-reveal>Almost everything that isn’t a circuit board, we make ourselves: from sheet, from filament, from rivets. Manufacturing starts in January. Point at a step to see it.</p>
 
     <ol class="index" data-index>
       <li class="index__row is-on" data-img="0">
         <span class="index__word">Cut</span>
-        <span class="index__desc">Every panel of the shell starts flat, laid out as one pattern on 0.125&nbsp;in 5052-H32 sheet.</span>
-        <img class="index__inline" src="assets/renders/shell-exploded.webp" alt="" width="1735" height="1635" loading="lazy">
+        <span class="index__desc">Every panel of the shell starts flat, laid out on 2&nbsp;mm 5052-H36 aluminium sheet.</span>
+        <img class="index__inline" src="assets/shop/cut.jpg" alt="" width="1200" height="1600" loading="lazy">
       </li>
       <li class="index__row" data-img="1">
         <span class="index__word">Fold</span>
-        <span class="index__desc">Bent on a brake into the chamfered box you see everywhere on this page.</span>
-        <img class="index__inline" src="assets/found/high-tonnage-press-brake.jpg" alt="" width="1920" height="1277" loading="lazy">
+        <span class="index__desc">Bent on a brake into the chamfered box you see everywhere on this page. The ramp gets four pressed ribs to guide the wheels.</span>
+        <img class="index__inline" src="assets/shop/fold.jpg" alt="" width="1200" height="1600" loading="lazy">
       </li>
       <li class="index__row" data-img="2">
         <span class="index__word">Rivet</span>
@@ -178,32 +246,105 @@
       </li>
       <li class="index__row" data-img="3">
         <span class="index__word">Print</span>
-        <span class="index__desc">Honeycomb crush cores, leg feet, brackets and the flag, printed and drop-tested until one survives.</span>
-        <img class="index__inline" src="assets/found/3d-printing.jpg" alt="" width="1920" height="2550" loading="lazy">
+        <span class="index__desc">The electronics module, brackets, flag and parachute plate, printed. We’re also testing whether printed honeycomb can stand in for aluminium.</span>
+        <img class="index__inline" src="assets/shop/print.jpg" alt="" width="964" height="1072" loading="lazy">
       </li>
       <li class="index__row" data-img="4">
         <span class="index__word">Wire</span>
-        <span class="index__desc">A Raspberry Pi 4 and four sensor boards packed into a bay the size of a paperback.</span>
+        <span class="index__desc">A Raspberry Pi&nbsp;4, a Pico&nbsp;2, three cameras and a battery pack in one printed module, with Ethernet and USB-C reachable from outside.</span>
         <img class="index__inline" src="assets/renders/cutaway-electronics.webp" alt="" width="1800" height="1391" loading="lazy">
       </li>
       <li class="index__row" data-img="5">
         <span class="index__word">Drop</span>
-        <span class="index__desc">Then up under a drone at Kawainui, and down again, until the numbers hold.</span>
-        <img class="index__inline" src="assets/found/koolau-mountains-over-kawainui-marsh-eric-tessmer.jpg" alt="" width="1920" height="1012" loading="lazy">
+        <span class="index__desc">Then up under a hexacopter over Kailua, and down again, higher each time, until the numbers hold.</span>
+        <img class="index__inline" src="assets/shop/drop.jpg" alt="" width="1800" height="1170" loading="lazy">
       </li>
     </ol>
 
     <figure class="index__frame" aria-hidden="true">
       <div class="index__stage">
-        <img class="is-on is-render" src="assets/renders/shell-exploded.webp" alt="" width="1735" height="1635" loading="lazy">
-        <img src="assets/found/high-tonnage-press-brake.jpg" alt="" width="1920" height="1277" loading="lazy">
+        <img class="is-on" src="assets/shop/cut.jpg" alt="" width="1200" height="1600" loading="lazy">
+        <img src="assets/shop/fold.jpg" alt="" width="1200" height="1600" loading="lazy">
         <img src="assets/found/a-stack-of-blind-rivets-2017.jpg" alt="" width="1920" height="1735" loading="lazy">
-        <img src="assets/found/3d-printing.jpg" alt="" width="1920" height="2550" loading="lazy">
+        <img src="assets/shop/print.jpg" alt="" width="964" height="1072" loading="lazy">
         <img class="is-render" src="assets/renders/cutaway-electronics.webp" alt="" width="1800" height="1391" loading="lazy">
-        <img src="assets/found/koolau-mountains-over-kawainui-marsh-eric-tessmer.jpg" alt="" width="1920" height="1012" loading="lazy">
+        <img src="assets/shop/drop.jpg" alt="" width="1800" height="1170" loading="lazy">
       </div>
-      <figcaption class="small" data-caption>Our exploded shell, as drawn in CAD.</figcaption>
+      <figcaption class="small" data-caption>Our shell panels on the waterjet, nested on one sheet.</figcaption>
     </figure>
+  </div>
+</section>
+
+<!-- ============ STATUS: performance, time, money ============ -->
+<section class="numbers" id="status" aria-labelledby="status-h">
+  <div class="numbers__grid wrap">
+    <div class="numbers__h" data-reveal>
+      <h2 class="lead" id="status-h">Where we stand</h2>
+      <p class="small">Updated 13 November 2026, after our Preliminary Design Review.</p>
+    </div>
+    <div class="num num--1" data-reveal style="--i:0"><p class="display nums">5.63 kg</p><p>Estimated mass against a 6&nbsp;kg limit. 367&nbsp;g to spare, and the budget we watch hardest.</p></div>
+    <div class="num num--2" data-reveal style="--i:1"><p class="head nums">$2,568</p><p>Planned spend with a 20% reserve: 86% of the $3,000 awarded.</p></div>
+    <div class="num num--3" data-reveal style="--i:2"><p class="head nums">CDR</p><p>Critical Design Review is next, in December. Then we order parts.</p></div>
+  </div>
+
+  <div class="status wrap">
+    <div class="status__perf" id="performance" data-reveal>
+      <h3>Performance</h3>
+      <p class="verdict">On track on paper. All eight objectives have a design that meets them; none has been tested yet, and mass is the tightest margin.</p>
+      <table class="perf">
+        <thead><tr><th scope="col">Objective</th><th scope="col">Where the design stands</th><th scope="col">Status</th></tr></thead>
+        <tbody>
+          <tr><td>Demonstrate a Mars landing, at small scale</td><td class="nums">All four subsystems through PDR; 5.63&nbsp;kg against a 6&nbsp;kg limit</td><td>On track, mass tight</td></tr>
+          <tr><td>Land upright at 8&nbsp;m/s or less</td><td class="nums">About 4&nbsp;m/s under canopy, 7.4&nbsp;m/s after a 2&nbsp;m cut-away; legs sized for 192&nbsp;J</td><td>Meets it by analysis; drop tests from January</td></tr>
+          <tr><td>Get the rover out</td><td class="nums">Torsion-spring ramp, 16&nbsp;cm long at 30°; electromagnet holds the rover</td><td>Designed</td></tr>
+          <tr><td>Raise the flag automatically</td><td>Printed flag on a servo, swings 90°</td><td>Designed</td></tr>
+          <tr><td>Capture and send imagery</td><td>Three AR0230 cameras on the lander; camera and LiDAR on the rover</td><td>Designed</td></tr>
+          <tr><td>Commands and telemetry both ways</td><td class="nums">XBee-PRO 900HP; 10&nbsp;Hz needs about 4.6&nbsp;kbit/s</td><td>Designed; range test open</td></tr>
+          <tr><td>Live video, independent of commands</td><td class="nums">Two analog 5.8&nbsp;GHz links on separate hardware</td><td>Designed; licence check open</td></tr>
+          <tr><td>Log lander and instrument data</td><td class="nums">Pico&nbsp;2 sensor hub: IMU, pressure, temperature, CO₂ at 1&nbsp;Hz</td><td>Designed</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="status__time" id="time" data-reveal>
+      <h3>Time</h3>
+      <p class="verdict">On schedule for the April 2027 demonstration. Next milestone: the Critical Design Review in December. To watch: drone support from AEI isn’t confirmed yet, and the Holmes Hall shop is under renovation until December.</p>
+      <ol class="timeline">
+        <li class="is-done"><span class="nums">Oct 2026</span><span>Proposal <em>done</em></span></li>
+        <li class="is-done"><span class="nums">Nov 2026</span><span>Preliminary Design Review <em>done</em></span></li>
+        <li class="is-now"><span class="nums">Dec 2026</span><span>Critical Design Review, parts ordered 7–16&nbsp;Dec <em>next</em></span></li>
+        <li><span class="nums">Jan 2027</span><span>Manufacturing, low drops</span></li>
+        <li><span class="nums">Feb 2027</span><span>First drops from the drone</span></li>
+        <li><span class="nums">Mar–Apr 2027</span><span>Subsystem tests, software integration</span></li>
+        <li><span class="nums">Apr 2027</span><span>Final demonstration</span></li>
+      </ol>
+    </div>
+
+    <div class="status__money" id="money" data-reveal>
+      <h3>Money</h3>
+      <p class="verdict">Under budget. Nothing is spent yet: orders go out 7–16 December. Planned spend is $2,568 including a 20% reserve, leaving $432 of the $3,000 unallocated.</p>
+      <div class="stack" role="img" aria-label="How the $3,000 award is planned: lander $770, deployables $490, rover $480, ground $400, reserve $428, unallocated $432">
+        <i style="--w:25.67%;--s:var(--sun)"></i><i style="--w:16.33%;--s:var(--rust)"></i><i style="--w:16%;--s:var(--bone)"></i><i style="--w:13.33%;--s:var(--bone-2)"></i><i style="--w:14.27%;--s:var(--navy-2)"></i>
+      </div>
+      <ul class="legend nums">
+        <li style="--s:var(--sun)"><span>Lander</span><span>$770</span></li>
+        <li style="--s:var(--rust)"><span>Deployables</span><span>$490</span></li>
+        <li style="--s:var(--bone)"><span>Rover</span><span>$480</span></li>
+        <li style="--s:var(--bone-2)"><span>Ground</span><span>$400</span></li>
+        <li style="--s:var(--navy-2)"><span>20% reserve</span><span>$428</span></li>
+        <li class="legend--empty"><span>Not yet allocated</span><span>$432</span></li>
+      </ul>
+      <dl class="funds nums">
+        <div><dt>ME Department award</dt><dd>$3,000, approved</dd></div>
+        <div><dt>UROP project funding</dt><dd>Up to $10,000, pending</dd></div>
+        <div><dt>ASUH research award</dt><dd>Up to $1,500, pending</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="backer wrap" data-reveal>
+    <p>Funded by</p>
+    <a class="backer__plate" href="https://me.hawaii.edu/"><img src="assets/uh-manoa-mechanical-engineering.png" width="2300" height="230" alt="University of Hawaiʻi at Mānoa Mechanical Engineering" loading="lazy"></a>
   </div>
 </section>
 
@@ -220,8 +361,8 @@
       <figcaption><h3>Proposed</h3><p>October. Wider and lower, gusseted legs, a camera mast and a flag.</p></figcaption>
     </figure>
     <figure class="evo__tile evo__tile--3" data-reveal style="--tf:var(--rust);--i:2">
-      <div class="evo__fill"><img src="assets/renders/ramp-rover.webp" width="1800" height="1514" alt="Current render: folded panels, telescoping legs with printed feet, rover on the open ramp" loading="lazy"></div>
-      <figcaption><h3>Detailed</h3><p>November. Folded panels, telescoping struts, printed feet, every board placed.</p></figcaption>
+      <div class="evo__fill"><img src="assets/renders/pdr-ramp.webp" width="1035" height="849" alt="Design review render: folded panels, tripod legs, parachute canister on top and the ramp down" loading="lazy"></div>
+      <figcaption><h3>Reviewed</h3><p>November. Parachute canister on top, tripod legs, a spring ramp, every board placed.</p></figcaption>
     </figure>
   </div>
 </section>
@@ -230,29 +371,13 @@
 <section class="angles" id="angles" aria-labelledby="angles-h">
   <div class="angles__grid wrap">
     <h2 class="head angles__h" id="angles-h" data-reveal>Every angle</h2>
-    <figure class="ang ang--a" data-reveal style="--tf:var(--paper)"><div class="ang__fill"><img src="assets/renders/xray-front.webp" width="1800" height="1348" alt="Ghosted front view showing the electronics bay behind the shell" loading="lazy"></div><figcaption class="small"><span>Electronics bay, ghosted</span><span>Nov 2026</span></figcaption></figure>
-    <figure class="ang ang--b" data-reveal style="--tf:var(--bone-2)"><div class="ang__fill"><img src="assets/renders/front-flag.webp" width="1800" height="1099" alt="Front view with the flag raised" loading="lazy"></div><figcaption class="small"><span>Front, flag up</span><span>Nov 2026</span></figcaption></figure>
-    <figure class="ang ang--c" data-reveal style="--tf:var(--rust)"><div class="ang__fill"><img src="assets/renders/legs-underside.webp" width="1800" height="1525" alt="View from below showing four legs and their struts" loading="lazy"></div><figcaption class="small"><span>Legs, from below</span><span>Nov 2026</span></figcaption></figure>
+    <figure class="ang ang--a" data-reveal style="--tf:var(--paper)"><div class="ang__fill"><img src="assets/renders/pdr-side-flag.webp" width="823" height="703" alt="Ghosted view showing the printed electronics module behind the shell" loading="lazy"></div><figcaption class="small"><span>Electronics module, ghosted</span><span>Nov 2026</span></figcaption></figure>
+    <figure class="ang ang--b" data-reveal style="--tf:var(--bone-2)"><div class="ang__fill"><img src="assets/renders/pdr-front.webp" width="1107" height="830" alt="Front view with the flag raised and the parachute canister on top" loading="lazy"></div><figcaption class="small"><span>Front, flag up</span><span>Nov 2026</span></figcaption></figure>
+    <figure class="ang ang--c" data-reveal style="--tf:var(--rust)"><div class="ang__fill"><img src="assets/renders/pdr-underside.webp" width="887" height="810" alt="View from below showing four tripod legs and their struts" loading="lazy"></div><figcaption class="small"><span>Legs, from below</span><span>Nov 2026</span></figcaption></figure>
     <figure class="ang ang--d" data-reveal style="--tf:var(--sun)"><div class="ang__fill"><img src="assets/renders/xray-rover.webp" width="1800" height="1471" alt="Ghosted view showing the rover packed inside the lander" loading="lazy"></div><figcaption class="small"><span>Rover, packed</span><span>Nov 2026</span></figcaption></figure>
-    <figure class="ang ang--e" data-reveal style="--tf:var(--paper)"><div class="ang__fill"><img src="assets/renders/cutaway-electronics.webp" width="1800" height="1391" alt="Cutaway of the electronics box with the Raspberry Pi 4 and sensor boards" loading="lazy"></div><figcaption class="small"><span>Pi 4 and sensor boards</span><span>Nov 2026</span></figcaption></figure>
-    <figure class="ang ang--f" data-reveal style="--tf:var(--bone-2)"><div class="ang__fill"><img src="assets/renders/side-ramp.webp" width="1800" height="1130" alt="Side view with the ramp lowered" loading="lazy"></div><figcaption class="small"><span>Side, ramp down</span><span>Nov 2026</span></figcaption></figure>
+    <figure class="ang ang--e" data-reveal style="--tf:var(--paper)"><div class="ang__fill"><img src="assets/renders/cutaway-electronics.webp" width="1800" height="1391" alt="Cutaway of the electronics module with the Raspberry Pi 4 and sensor boards" loading="lazy"></div><figcaption class="small"><span>Pi 4 and sensor boards</span><span>Nov 2026</span></figcaption></figure>
+    <figure class="ang ang--f" data-reveal style="--tf:var(--bone-2)"><div class="ang__fill"><img src="assets/renders/pdr-side-ramp.webp" width="1042" height="856" alt="Side view with the ramp lowered" loading="lazy"></div><figcaption class="small"><span>Side, ramp down</span><span>Nov 2026</span></figcaption></figure>
   </div>
-</section>
-
-<!-- ============ NUMBERS: stepped tiles ============ -->
-<section class="numbers" id="numbers" aria-labelledby="numbers-h">
-  <div class="numbers__grid wrap">
-    <h2 class="numbers__h lead" id="numbers-h" data-reveal>What it has to hit</h2>
-    <div class="num num--1" data-reveal style="--i:0"><span class="display nums">40 m</span><p>Release height under the drone. The brief allows 30 to 40.</p></div>
-    <div class="num num--2" data-reveal style="--i:1"><span class="head nums">4.08 kg</span><p>Estimated mass against a 6&nbsp;kg limit: a 32% margin.</p></div>
-    <div class="num num--3" data-reveal style="--i:2"><span class="head nums">$1,474</span><p>Of the $3,000 awarded by UH Mechanical Engineering.</p></div>
-  </div>
-  <ul class="numbers__more wrap nums" data-reveal>
-    <li><span class="lead">≤ 8 m/s</span><span>at touchdown</span></li>
-    <li><span class="lead">2–3 m</span><span>chute cut-away</span></li>
-    <li><span class="lead">10 Hz</span><span>telemetry</span></li>
-    <li><span class="lead">1 m</span><span>rover drives, minimum</span></li>
-  </ul>
 </section>
 
 <!-- ============ CREW: inset panel ============ -->
@@ -260,32 +385,31 @@
   <div class="crew__panel">
     <div class="crew__left">
       <h2 class="head" id="crew-h" data-reveal>Eleven people, one box</h2>
-      <figure class="crew__shape" data-reveal><img src="assets/renders/front-flag.webp" width="1800" height="1099" alt="The Ares lander, front view" loading="lazy"></figure>
+      <figure class="crew__shape" data-reveal><img src="assets/renders/pdr-front.webp" width="1107" height="830" alt="The Ares lander, front view" loading="lazy"></figure>
     </div>
     <div class="crew__right">
       <ul class="people">
-        <li data-reveal style="--i:0"><img class="face" src="assets/team/owen-bramley.webp" width="280" height="280" alt="Owen Bramley" loading="lazy"><span><strong>Owen Bramley</strong>Project manager, lander member</span></li>
+        <li data-reveal style="--i:0"><img class="face" src="assets/team/owen-bramley.webp" width="280" height="280" alt="Owen Bramley" loading="lazy"><span><strong>Owen Bramley</strong>Project manager, lander structure</span></li>
         <li data-reveal style="--i:1"><img class="face" src="assets/team/gabriel-bansil.webp" width="280" height="280" alt="Gabriel Bansil" loading="lazy"><span><strong>Gabriel Bansil</strong>Systems integrator</span></li>
-        <li data-reveal style="--i:2"><img class="face" src="assets/team/kai-mitchell.webp" width="280" height="280" alt="Kai Mitchell" loading="lazy"><span><strong>Kai Mitchell</strong>Fiscal officer, ground and comms lead</span></li>
-        <li data-reveal style="--i:3"><img class="face" src="assets/team/leanelyn-tolentino.webp" width="280" height="280" alt="Leanelyn Tolentino" loading="lazy"><span><strong>Leanelyn Tolentino</strong>Deployables lead, ramp and flag</span></li>
-        <li data-reveal style="--i:4"><img class="face" src="assets/team/caleb-borengasser.webp" width="280" height="280" alt="Caleb Borengasser" loading="lazy"><span><strong>Caleb Borengasser</strong>Lander lead</span></li>
+        <li data-reveal style="--i:2"><img class="face" src="assets/team/kai-mitchell.webp" width="280" height="280" alt="Kai Mitchell" loading="lazy"><span><strong>Kai Mitchell</strong>Fiscal officer, ground lead</span></li>
+        <li data-reveal style="--i:3"><img class="face" src="assets/team/leanelyn-tolentino.webp" width="280" height="280" alt="Leanelyn Tolentino" loading="lazy"><span><strong>Leanelyn Tolentino</strong>Deployables lead: release, ramp and flag</span></li>
+        <li data-reveal style="--i:4"><img class="face" src="assets/team/caleb-borengasser.webp" width="280" height="280" alt="Caleb Borengasser" loading="lazy"><span><strong>Caleb Borengasser</strong>Lander lead, imaging and data</span></li>
         <li data-reveal style="--i:5"><img class="face" src="assets/team/zachary-gregorio.webp" width="280" height="280" alt="Zachary Gregorio" loading="lazy"><span><strong>Zachary Gregorio</strong>Rover lead</span></li>
-        <li data-reveal style="--i:6"><img class="face" src="assets/team/ethan-santiago.webp" width="280" height="280" alt="Ethan Santiago" loading="lazy"><span><strong>Ethan Santiago</strong>Deployables member, parachute</span></li>
-        <li data-reveal style="--i:7"><img class="face" src="assets/team/julien-wooten.webp" width="280" height="280" alt="Julien Wooten" loading="lazy"><span><strong>Julien Wooten</strong>Deployables member, landing legs</span></li>
+        <li data-reveal style="--i:6"><img class="face" src="assets/team/ethan-santiago.webp" width="280" height="280" alt="Ethan Santiago" loading="lazy"><span><strong>Ethan Santiago</strong>Deployables, parachute</span></li>
+        <li data-reveal style="--i:7"><img class="face" src="assets/team/julien-wooten.webp" width="280" height="280" alt="Julien Wooten" loading="lazy"><span><strong>Julien Wooten</strong>Deployables, landing legs</span></li>
       </ul>
-      <p class="crew__with" data-reveal>Plus Gabriel Figueredo, Max Sibayan and Peter Simeon, Vertically Integrated Projects members on the deployables team, and Dr.&nbsp;Sorensen, our instructor and the reason for the name.</p>
-      <a class="button" href="mailto:ob3@hawaii.edu?subject=Project%20Ares" data-reveal>Talk to the team</a>
+      <p class="crew__with" data-reveal>Plus Gabriel Figueiredo on rover software, and Max Sibayan and Peter Simeon on deployables, all three from the Vertically Integrated Projects programme. Guided by Dr.&nbsp;Sorensen, our instructor and the reason for the name, Dr.&nbsp;Hudson, our technical advisor, and Kayla Crook, our TA.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ CTA: the action tile ============ -->
-<section class="watch" id="watch" aria-labelledby="watch-h">
+<!-- ============ CTA: contact ============ -->
+<section class="watch" id="contact" aria-labelledby="watch-h">
   <div class="watch__row">
     <figure class="watch__flank watch__flank--photo"><img src="assets/found/koolau-mountains-over-kawainui-marsh-eric-tessmer.jpg" width="1920" height="1012" alt="The Koʻolau mountains above Kawainui Marsh in Kailua" loading="lazy"></figure>
     <div class="watch__tile" data-reveal>
       <h2 class="head" id="watch-h">Come watch it fall</h2>
-      <p>Spring 2027 at Kawainui Model Airplane Field in Kailua. Sponsors, students and the curious are all welcome.</p>
+      <p>Drops start in February 2027 in Kailua, with the final demonstration in April. Sponsors, students and the curious are all welcome. Ask us anything: Owen Bramley, project manager, <a class="link" href="mailto:ob3@hawaii.edu">ob3@hawaii.edu</a>.</p>
       <a class="button" href="mailto:ob3@hawaii.edu?subject=Project%20Ares%20drop%20day&amp;body=Hi%20Team%20DSLR%2C%0A%0AI%27d%20like%20to%20come%20to%20the%20Ares%20drop%20test.%20Could%20you%20send%20me%20the%20date%3F%0A%0AThanks%2C" data-mail>Ask for the drop date</a>
     </div>
     <div class="watch__flank watch__flank--flat" aria-hidden="true"></div>
@@ -305,28 +429,31 @@
     </div>
     <div class="foot__cols">
       <ul>
+        <li><a class="link" href="#mission">The mission</a></li>
         <li><a class="link" href="#drop">The drop</a></li>
         <li><a class="link" href="#chute">Size the parachute</a></li>
+      </ul>
+      <ul>
+        <li><a class="link" href="#analysis">Show the working</a></li>
         <li><a class="link" href="#machine">The machine</a></li>
-      </ul>
-      <ul>
         <li><a class="link" href="#build">The build</a></li>
-        <li><a class="link" href="#angles">Every angle</a></li>
-        <li><a class="link" href="#numbers">The numbers</a></li>
       </ul>
       <ul>
+        <li><a class="link" href="#status">Where we stand</a></li>
         <li><a class="link" href="#crew">The crew</a></li>
-        <li><a class="link" href="#watch">Drop day</a></li>
+        <li><a class="link" href="#contact">Contact</a></li>
       </ul>
-      <p class="foot__addr">ME 481 Senior Design, Section 2<br>Department of Mechanical Engineering<br>University of Hawaiʻi at Mānoa, Honolulu</p>
+      <p class="foot__addr">ME 481 Senior Design, Section 2<br>Department of Mechanical Engineering<br>University of Hawaiʻi at Mānoa, Honolulu<br><a class="link" href="mailto:ob3@hawaii.edu">ob3@hawaii.edu</a></p>
     </div>
-    <p class="credits small">Renders are Team DSLR's own CAD. Other pictures show the world around the project, not our hardware: <a href="https://commons.wikimedia.org/wiki/File:HiRISE_image_of_MSL_during_EDL.png">“HiRISE image of MSL during EDL”</a> by NASA/JPL/University of Arizona/HiRISE Team, public domain; <a href="https://commons.wikimedia.org/wiki/File:Perseverance_Rover%27s_Descent_and_Touchdown_on_Mars_Onboard_Camera_Views_.webm">“Perseverance Rover's Descent and Touchdown on Mars Onboard Camera Views”</a> by NASA/JPL-Caltech, public domain, trimmed and cropped; <a href="https://commons.wikimedia.org/wiki/File:Koolau_Mountains_over_Kawainui_Marsh_,_Eric_Tessmer,_Hawaii_-_panoramio.jpg">“Koolau Mountains over Kawainui Marsh”</a> by Eric Tessmer, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:High-tonnage_press_brake.jpg">“High-tonnage press brake”</a> by GaspariniIndustries, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:A_stack_of_blind_rivets_2017.jpg">“A stack of blind rivets”</a> by Fructibus, CC0; <a href="https://commons.wikimedia.org/wiki/File:3D_Printing.jpg">“3D Printing”</a> by MukhtaromST, CC0. All via Wikimedia Commons. Not affiliated with or endorsed by NASA.</p>
+    <p class="credits small">Renders and analysis are Team DSLR’s own, from our Preliminary Design Review. Other pictures show the world around the project, not our hardware: <a href="https://commons.wikimedia.org/wiki/File:HiRISE_image_of_MSL_during_EDL.png">“HiRISE image of MSL during EDL”</a> by NASA/JPL/University of Arizona/HiRISE Team, public domain; <a href="https://commons.wikimedia.org/wiki/File:Perseverance_Rover%27s_Descent_and_Touchdown_on_Mars_Onboard_Camera_Views_.webm">“Perseverance Rover's Descent and Touchdown on Mars Onboard Camera Views”</a> by NASA/JPL-Caltech, public domain, trimmed and cropped; <a href="https://commons.wikimedia.org/wiki/File:Hexacopter_Multicopter_DJI-S800_on-air_credit_Alexander_Glinz.jpg">“Hexacopter Multicopter DJI-S800 on-air”</a> by Alexander Glinz, <a href="https://creativecommons.org/licenses/by-sa/3.0/at/deed.en">CC BY-SA 3.0 AT</a>; <a href="https://commons.wikimedia.org/wiki/File:Koolau_Mountains_over_Kawainui_Marsh_,_Eric_Tessmer,_Hawaii_-_panoramio.jpg">“Koolau Mountains over Kawainui Marsh”</a> by Eric Tessmer, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:A_stack_of_blind_rivets_2017.jpg">“A stack of blind rivets”</a> by Fructibus, CC0. All via Wikimedia Commons. Not affiliated with or endorsed by NASA.</p>
     <div class="foot__last">
       <span class="small">© 2026 Team DSLR · Project Ares</span>
       <a class="button button--small" href="#top">Back to 40 m</a>
     </div>
   </div>
 </footer>
+
+<a class="jump button button--small" href="#status" data-jump>Where we stand</a>
 
 <script src="main.js" defer></script>
 <script defer src="https://umami.owenbramley.com/script.js" data-website-id="4832b498-ec76-4189-995f-ac75250d1d54"></script>

@@ -32,42 +32,26 @@ Public path: Cloudflare tunnel → edge nginx (`ARESLANDER_DOMAIN` block) → Tr
 `stack/ares.yml` in the Bramblebush repo. Its Traefik router outranks the old "under
 construction" router for areslander.space, which is kept at 0 replicas as a fallback.
 
-### Today: build on the Pis
-
-There is no registry in the loop yet, so the image is built on each node that runs it:
-
-```bash
-# from this folder, for each app node (bram4, bram5)
-rsync -a --delete --exclude .git --exclude .taste-skill ./ owen@bram4.local:~/build/ares-site/
-ssh owen@bram4.local 'cd ~/build/ares-site && docker build -t ares-site:1.0.1 .'
-```
-
-Then roll the service to the new tag from a manager (bram1):
-
-```bash
-ssh owen@bram1.local 'docker service update --no-resolve-image --image ares-site:1.0.1 ares_site'
-```
-
-Bump the tag on every release (1.0.1, 1.0.2 …) so Swarm sees a change, and put the same tag in
-`ARES_IMAGE` before any `docker stack deploy`.
-
-### Next: GitHub builds it
+### Releasing
 
 `.github/workflows/image.yml` builds the image for arm64 and amd64 on every push to `main` and
-pushes `ghcr.io/<owner>/ares-site:main`. Once the first run has finished:
+pushes the public package `ghcr.io/owenbramley/ares-site:main`. The stack runs that tag with
+`ARES_AUTOUPDATE=true`, so shepherd on the cluster sees the new digest and rolls both replicas
+within a few minutes. A release is just `git push`.
 
-1. On GitHub, open the `ares-site` package → Package settings → change visibility to Public
-   (the Pis pull without credentials).
-2. In the Bramblebush repo, set `ARES_IMAGE=ghcr.io/<owner>/ares-site:main` and
-   `ARES_AUTOUPDATE=true`, then redeploy the stack without `--resolve-image never`.
+The service rolls stop-first: two app nodes with one replica each leave no room for a
+start-first task.
 
-After that, a release is just `git push`: shepherd on the cluster sees the new digest and rolls
-the service within a few minutes.
+## Keeping it current
+
+The "Where we stand" section is the status page for sponsors: mass, money and schedule. Update
+its numbers and the "Updated …" date after each design review, using the figures in the review
+report (the November 2026 numbers come from the Preliminary Design Review).
 
 ## Before launch
 
-- Fabrication photos in "Made by hand" are other people's pictures of the same processes,
-  credited in the footer. Replace them with the team's own shop photos when they exist.
+- In "Made by hand", Cut, Fold, Print and Drop are the team's own photos (`assets/shop/`). Rivet
+  is still a credited stock picture; swap it when the team has its own.
 - The Umami tracker loads from `umami.owenbramley.com` (the public tracker host); the dashboard
   stays private on the tailnet.
 

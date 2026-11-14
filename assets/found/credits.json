@@ -44,30 +44,6 @@
     "saved": "2026-11-12T08:23:30.739Z"
   },
   {
-    "file": "assets/found/high-tonnage-press-brake.jpg",
-    "media": "image",
-    "ref": "commons:54573082",
-    "title": "High-tonnage press brake",
-    "creator": "GaspariniIndustries",
-    "creatorUrl": null,
-    "date": "2016-07-05",
-    "license": "CC BY-SA 4.0",
-    "licenseCode": "by-sa",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "creditRequired": true,
-    "page": "https://commons.wikimedia.org/wiki/File:High-tonnage_press_brake.jpg",
-    "via": "Wikimedia Commons",
-    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/High-tonnage_press_brake.jpg/1920px-High-tonnage_press_brake.jpg",
-    "width": 1920,
-    "height": 1277,
-    "bytes": 399163,
-    "credit": "\"High-tonnage press brake\" by GaspariniIndustries, CC BY-SA 4.0, via Wikimedia Commons",
-    "notes": [
-      "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
-    ],
-    "saved": "2026-11-12T08:23:31.292Z"
-  },
-  {
     "file": "assets/found/a-stack-of-blind-rivets-2017.jpg",
     "media": "image",
     "ref": "commons:62728627",
@@ -90,25 +66,10 @@
     "saved": "2026-11-12T08:23:31.870Z"
   },
   {
-    "file": "assets/found/3d-printing.jpg",
-    "media": "image",
-    "ref": "commons:157866572",
-    "title": "3D Printing",
-    "creator": "MukhtaromST",
-    "creatorUrl": null,
-    "date": "2023-01-18",
-    "license": "CC0",
-    "licenseCode": "cc0",
-    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "creditRequired": false,
-    "page": "https://commons.wikimedia.org/wiki/File:3D_Printing.jpg",
-    "via": "Wikimedia Commons",
-    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/3D_Printing.jpg/1920px-3D_Printing.jpg",
-    "width": 1920,
-    "height": 2550,
-    "bytes": 790705,
-    "credit": "\"3D Printing\" by MukhtaromST, CC0, via Wikimedia Commons",
-    "notes": [],
-    "saved": "2026-11-12T08:23:32.272Z"
+    "file": "assets/found/hexacopter-dji-s800-alexander-glinz.jpg",
+    "title": "Hexacopter Multicopter DJI-S800 on-air",
+    "author": "Alexander Glinz",
+    "license": "CC BY-SA 3.0 AT",
+    "source": "https://commons.wikimedia.org/wiki/File:Hexacopter_Multicopter_DJI-S800_on-air_credit_Alexander_Glinz.jpg"
   }
 ]

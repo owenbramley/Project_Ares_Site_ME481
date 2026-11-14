@@ -34,10 +34,10 @@ const g = 9.81;
   // each phase owns a slice of the scroll: [start, end]
   const starts = [0, 0.08, 0.19, 0.33, 0.50, 0.62, 0.72, 0.82, 0.91, 1.0];
   // altitude keyframes (progress, metres)
-  const altKeys = [[0, 40], [0.06, 40], [0.12, 37], [0.22, 30], [0.40, 14], [0.56, 2.5], [0.66, 0]];
+  const altKeys = [[0, 40], [0.06, 40], [0.12, 37], [0.22, 30], [0.40, 14], [0.56, 2.0], [0.66, 0]];
   // mission clock keyframes (progress, minutes after touchdown)
-  const clockKeys = [[0.66, 0], [0.74, 10], [0.84, 11], [0.93, 13], [1, 14]];
-  const VT = 3.76, H_CUT = 2.5, H_CHUTE = 36;
+  const clockKeys = [[0.66, 0], [0.74, 10], [0.84, 11], [0.93, 12], [1, 13]];
+  const VT = 3.95, H_CUT = 2.0, H_CHUTE = 36;
 
   const interp = (keys, p) => {
     if (p <= keys[0][0]) return keys[0][1];
@@ -84,7 +84,7 @@ const g = 9.81;
       const mm = Math.floor(m), ss = Math.floor((m - mm) * 60);
       out.value.textContent = `${String(mm).padStart(2, '0')}:${String(ss).padStart(2, '0')}`;
       out.unit.textContent = '';
-      out.speed.textContent = p < 0.68 ? 'Mission clock. Down at 7.9 m/s, upright' : 'Mission clock, on the ground';
+      out.speed.textContent = p < 0.68 ? 'Mission clock. Down at 7.4 m/s, upright' : 'Mission clock, on the ground';
     }
 
     // the ground rises as we fall: perspective-ish, it grows fast near the end
@@ -138,7 +138,7 @@ const g = 9.81;
   const $ = (id) => root.querySelector('#' + id);
   const show = (k, v) => { const el = root.querySelector(`[data-show="${k}"]`); if (el) el.textContent = v; };
   const put = (k, v) => { const el = root.querySelector(`[data-out="${k}"]`); if (el) el.textContent = v; };
-  const RHO = 1.2;
+  const RHO = 1.225;
 
   function update() {
     const m = +$('mass').value, d = +$('dia').value, hc = +$('cut').value;
@@ -169,12 +169,12 @@ const g = 9.81;
   const imgs = frame.querySelectorAll('.index__stage img');
   const cap = frame.querySelector('[data-caption]');
   const caps = [
-    'Our exploded shell, as drawn in CAD.',
-    'A press brake, the machine that folds sheet. Photo: GaspariniIndustries, CC BY-SA 4.0.',
+    'Our shell panels on the waterjet, nested on one sheet.',
+    'Our first panels, cut and bent.',
     'Blind rivets, the kind that hold our panels. Photo: Fructibus, CC0.',
-    'A desktop printer at work. Photo: MukhtaromST, CC0.',
-    'Our electronics bay in CAD: Pi 4 above, sensor boards below.',
-    'Kawainui, where the drops happen. Photo: Eric Tessmer, CC BY 3.0.',
+    'One of our parts printing on a Prusa i3.',
+    'Our electronics module in CAD: Pi 4 above, sensor boards below.',
+    'The grass strip in Kailua, where the drops happen.',
   ];
   const rows = list.querySelectorAll('.index__row');
   const set = (n) => {
@@ -187,4 +187,18 @@ const g = 9.81;
     r.tabIndex = 0;
     r.addEventListener('focus', () => set(+r.dataset.img));
   });
+})();
+
+/* ---------- 5. the jump to status: shown after the hero, hidden over status and the drop ---------- */
+(() => {
+  const jump = document.querySelector('[data-jump]');
+  const hero = document.querySelector('.hero');
+  const status = document.getElementById('status');
+  const drop = document.querySelector('.drop');
+  const foot = document.querySelector('.foot');
+  if (!jump || !hero || !status || !('IntersectionObserver' in window)) return;
+  const seen = new Map();
+  const update = () => jump.classList.toggle('is-on', !seen.get(hero) && !seen.get(status) && !seen.get(drop) && !seen.get(foot));
+  const io = new IntersectionObserver((entries) => { entries.forEach((e) => seen.set(e.target, e.isIntersecting)); update(); }, { threshold: 0 });
+  [hero, status, drop, foot].forEach((el) => el && io.observe(el));
 })();
