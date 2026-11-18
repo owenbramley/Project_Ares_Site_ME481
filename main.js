@@ -310,7 +310,7 @@ const g = 9.81;
     s.src = 'https://unpkg.com/@google/model-viewer@4.0.0/dist/model-viewer.min.js';
     document.head.append(s);
     // a tall phone frame needs the camera further back to keep the legs in
-    if (matchMedia('(max-width: 760px)').matches) mv.setAttribute('camera-orbit', '-30deg 70deg 125%');
+    if (matchMedia('(max-width: 760px)').matches) mv.setAttribute('camera-orbit', '-30deg 80deg 125%');
     mv.setAttribute('src', mv.dataset.src);
     // the AR button only where AR can actually start (phones and headsets)
     mv.addEventListener('load', () => mv.classList.toggle('can-ar', !!mv.canActivateAR), { once: true });
