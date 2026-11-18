@@ -214,6 +214,19 @@
     <h2 class="sr-only" id="machine-h">The machine</h2>
     <p class="machine__text" data-reveal>The shell <span class="slot" style="--tf:var(--bone)"><img src="assets/renders/shell-exploded.webp" alt="" width="1735" height="1635"></span> is folded from 2&nbsp;mm aluminium sheet and riveted. Legs <span class="slot" style="--tf:var(--sun)"><img src="assets/renders/pdr-underside.webp" alt="" width="887" height="810"></span> crush honeycomb, a spring swings the ramp down <span class="slot" style="--tf:var(--rust)"><img src="assets/renders/pdr-side-ramp.webp" alt="" width="1042" height="856"></span> and a rover drives out.</p>
 
+    <figure class="stage" data-reveal>
+      <model-viewer class="stage__model" data-src="assets/model/ares-lander.glb" poster="assets/model/ares-lander-poster.webp"
+        alt="3D model of the Ares lander with its rover inside and the ramp down. Drag to turn it."
+        camera-controls disable-zoom touch-action="pan-y" interaction-prompt="none"
+        auto-rotate auto-rotate-delay="2500" rotation-per-second="10deg"
+        camera-orbit="-30deg 70deg 88%" field-of-view="26deg" min-camera-orbit="auto 15deg auto" max-camera-orbit="auto 92deg auto"
+        environment-image="neutral" exposure="1.2" shadow-intensity="1.1" shadow-softness="0.7"
+        ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor" loading="eager" reveal="auto">
+        <button class="button stage__ar" slot="ar-button" type="button">Put it on your floor, full size</button>
+      </model-viewer>
+      <figcaption class="small stage__cap"><span>The whole assembly from our CAD, shell in Fractured Illusion Green under a clear coat. Drag to turn it.</span><span class="nums">50 × 46 × 30 cm</span></figcaption>
+    </figure>
+
     <ul class="systems">
       <li data-reveal style="--i:0"><h3>Lander</h3><p>Riveted 5052 aluminium panels around a printed electronics module: a Raspberry Pi&nbsp;4, a Pico&nbsp;2 sensor hub and three AR0230 cameras that can look straight at the sun.</p><p class="small">Caleb Borengasser, Owen Bramley</p></li>
       <li data-reveal style="--i:1"><h3>Deployables</h3><p>A spring-fired parachute dropped by a solenoid pin, four tripod legs on crushable honeycomb, a torsion-spring ramp, a servo flag and a servo release from the drone.</p><p class="small">Leanelyn Tolentino, Ethan Santiago, Julien Wooten, Max Sibayan, Peter Simeon</p></li>

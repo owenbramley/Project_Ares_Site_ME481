@@ -298,3 +298,24 @@ const g = 9.81;
       panel.replaceChildren(el('p', {}, 'The folders are not available right now. ', el('a', { class: 'link', href: '/wiki/', text: 'Try the full file list' }), '.'));
     });
 })();
+
+/* ---------- 7. the 3D lander: load the viewer only as it comes near ---------- */
+(() => {
+  const mv = document.querySelector('.stage__model');
+  if (!mv) return;
+  const go = () => {
+    if (go.done) return; go.done = true;
+    const s = document.createElement('script');
+    s.type = 'module';
+    s.src = 'https://unpkg.com/@google/model-viewer@4.0.0/dist/model-viewer.min.js';
+    document.head.append(s);
+    // a tall phone frame needs the camera further back to keep the legs in
+    if (matchMedia('(max-width: 760px)').matches) mv.setAttribute('camera-orbit', '-30deg 70deg 125%');
+    mv.setAttribute('src', mv.dataset.src);
+    // the AR button only where AR can actually start (phones and headsets)
+    mv.addEventListener('load', () => mv.classList.toggle('can-ar', !!mv.canActivateAR), { once: true });
+  };
+  if (!('IntersectionObserver' in window)) { go(); return; }
+  const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { go(); io.disconnect(); } }, { rootMargin: '900px 0px' });
+  io.observe(mv);
+})();
